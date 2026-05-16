@@ -83,8 +83,7 @@ export default function SocialGraph() {
           fontSize: "15px",
         }}
       >
-        Real-time visualization of peer trust and network connectivity within
-        ZerithDB ecosystems.
+        Real-time visualization of peer trust and network connectivity within ZerithDB ecosystems.
       </p>
 
       <div
@@ -146,41 +145,13 @@ export default function SocialGraph() {
             left: 0,
           }}
         >
-          <line
-            x1="20%"
-            y1="18%"
-            x2="45%"
-            y2="45%"
-            stroke="#475569"
-            strokeWidth="3"
-          />
+          <line x1="20%" y1="18%" x2="45%" y2="45%" stroke="#475569" strokeWidth="3" />
 
-          <line
-            x1="45%"
-            y1="45%"
-            x2="58%"
-            y2="72%"
-            stroke="#475569"
-            strokeWidth="3"
-          />
+          <line x1="45%" y1="45%" x2="58%" y2="72%" stroke="#475569" strokeWidth="3" />
 
-          <line
-            x1="45%"
-            y1="45%"
-            x2="74%"
-            y2="28%"
-            stroke="#475569"
-            strokeWidth="3"
-          />
+          <line x1="45%" y1="45%" x2="74%" y2="28%" stroke="#475569" strokeWidth="3" />
 
-          <line
-            x1="20%"
-            y1="18%"
-            x2="25%"
-            y2="75%"
-            stroke="#475569"
-            strokeWidth="3"
-          />
+          <line x1="20%" y1="18%" x2="25%" y2="75%" stroke="#475569" strokeWidth="3" />
         </svg>
 
         {peers.map((peer) => (
@@ -209,18 +180,10 @@ Latency: ${peer.latency}`}
                 background: peer.color,
                 border: "3px solid rgba(255,255,255,0.2)",
                 transition: "0.3s ease",
-                transform:
-                  activePeer === peer.name
-                    ? "scale(1.15)"
-                    : "scale(1)",
+                transform: activePeer === peer.name ? "scale(1.15)" : "scale(1)",
                 boxShadow:
-                  activePeer === peer.name
-                    ? `0 0 60px ${peer.color}`
-                    : `0 0 30px ${peer.color}`,
-                animation:
-                  peer.status === "Suspicious"
-                    ? "pulse 1.5s infinite"
-                    : "none",
+                  activePeer === peer.name ? `0 0 60px ${peer.color}` : `0 0 30px ${peer.color}`,
+                animation: peer.status === "Suspicious" ? "pulse 1.5s infinite" : "none",
               }}
             ></div>
 
@@ -253,10 +216,10 @@ Latency: ${peer.latency}`}
                 {peer.color === "#22c55e"
                   ? "🟢"
                   : peer.color === "#3b82f6"
-                  ? "🔵"
-                  : peer.color === "#eab308"
-                  ? "🟡"
-                  : "🔴"}{" "}
+                    ? "🔵"
+                    : peer.color === "#eab308"
+                      ? "🟡"
+                      : "🔴"}{" "}
                 {peer.status} • {peer.trust}
               </p>
             </div>
