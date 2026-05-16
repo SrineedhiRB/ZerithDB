@@ -250,4 +250,3 @@ Latency: ${peer.latency}`}
     </div>
   );
 }
-
