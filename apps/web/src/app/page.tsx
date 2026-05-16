@@ -110,14 +110,14 @@ export default function LandingPage() {
         {/* Background Decorations */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full -z-10 pointer-events-none overflow-visible">
           {/* Subtle Dot Grid Pattern */}
-          <div 
-            className="absolute inset-0 opacity-[0.15]" 
-            style={{ 
-              backgroundImage: `radial-gradient(#cbd5e1 1px, transparent 1px)`, 
-              backgroundSize: '24px 24px' 
-            }} 
+          <div
+            className="absolute inset-0 opacity-[0.15]"
+            style={{
+              backgroundImage: `radial-gradient(#cbd5e1 1px, transparent 1px)`,
+              backgroundSize: "24px 24px",
+            }}
           />
-          
+
           {/* Blurred Background Glows */}
           <motion.div
             animate={{
@@ -149,10 +149,10 @@ export default function LandingPage() {
               rotate: [-15, 5, -25, -15],
               borderRadius: ["2.5rem", "4rem", "2rem", "2.5rem"],
             }}
-            transition={{ 
-              duration: 12, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
+            transition={{
+              duration: 12,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
             className="absolute top-[10%] left-[5%] w-40 h-40 bg-white/20 border border-blue-200/40 backdrop-blur-[12px] hidden xl:block shadow-[0_20px_50px_rgba(59,130,246,0.15)]"
           />
@@ -166,11 +166,11 @@ export default function LandingPage() {
               rotate: [25, 40, 20, 25],
               borderRadius: ["2.5rem", "4rem", "2rem", "2.5rem"],
             }}
-            transition={{ 
-              duration: 15, 
-              repeat: Infinity, 
+            transition={{
+              duration: 15,
+              repeat: Infinity,
               ease: "easeInOut",
-              delay: 1 
+              delay: 1,
             }}
             className="absolute top-[38%] right-[5%] w-52 h-52 bg-white/10 border border-indigo-200/40 backdrop-blur-[6px] hidden xl:block shadow-[0_8px_30px_rgba(99,102,241,0.06)]"
           />
@@ -670,10 +670,10 @@ export default function LandingPage() {
               rotate: [12, 28, 5, 12],
               borderRadius: ["2rem", "3.5rem", "1.5rem", "2rem"],
             }}
-            transition={{ 
-              duration: 14, 
-              repeat: Infinity, 
-              ease: "easeInOut" 
+            transition={{
+              duration: 14,
+              repeat: Infinity,
+              ease: "easeInOut",
             }}
             className="absolute top-12 left-[12%] w-36 h-36 bg-white/15 border border-blue-200/30 backdrop-blur-[10px] hidden md:block shadow-[0_15px_35px_rgba(0,0,0,0.08)]"
           />
@@ -684,11 +684,11 @@ export default function LandingPage() {
               rotate: [-20, -30, -15, -20],
               borderRadius: ["3rem", "4rem", "2rem", "3rem"],
             }}
-            transition={{ 
-              duration: 18, 
-              repeat: Infinity, 
-              ease: "easeInOut", 
-              delay: 1 
+            transition={{
+              duration: 18,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: 1,
             }}
             className="absolute bottom-12 right-[15%] w-48 h-48 bg-white/5 border border-gray-200/40 backdrop-blur-[5px] hidden md:block shadow-[0_10px_30px_rgba(0,0,0,0.03)]"
           />
