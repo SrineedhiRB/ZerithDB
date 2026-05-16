@@ -19,7 +19,7 @@ jobs:
           script: |
             const body = context.payload.pull_request.body || "";
             const prNumber = context.payload.pull_request.number;
-            
+
             // Regex to find linked issues (e.g., "Fixes #123", "Closes #456")
             const issueRegex = /(?:close|closes|closed|fix|fixes|fixed|resolve|resolves|resolved)\s+#(\d+)/gi;
             const linkedIssueIds = new Set();
@@ -27,11 +27,11 @@ jobs:
             while ((match = issueRegex.exec(body)) !== null) {
               linkedIssueIds.add(match[1]);
             }
-            
+
             const labelsToAdd = new Set();
             labelsToAdd.add('gssoc-26'); // Default label for this repo
             labelsToAdd.add('status: needs-review'); // Mark as needing review
-            
+
             // 1. Inherit labels from linked issues
             if (linkedIssueIds.size > 0) {
               console.log(`Found linked issues: ${Array.from(linkedIssueIds).join(', ')}`);
@@ -53,7 +53,7 @@ jobs:
                 }
               }
             }
-            
+
             // 2. Path-based labeling (as fallback or addition)
             try {
               const { data: files } = await github.rest.pulls.listFiles({
